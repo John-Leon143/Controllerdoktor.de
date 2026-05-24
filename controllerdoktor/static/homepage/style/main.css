@@ -1,0 +1,356 @@
+
+:root {
+    --menu-count: 6;
+    background-color: #dfe7d8;
+    overflow-y: scroll;
+    font-family: 'Roboto';
+}
+html {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+h1 {
+    font-size: 26px;
+    line-height: 32px;
+    font-family: 'Roboto';
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+}
+h2 {
+    color: white;
+}
+h3 {
+    color: white;
+}
+
+h4 {
+    color: white;
+}
+p {
+    font-size: 20px;
+    line-height: 18px;
+    font-family: 'Roboto';
+    color: white;
+}
+
+a {
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: 'Roboto';
+}
+
+
+body {
+    background-color: #dfe7d8;
+}
+
+#logo-mobile {
+    display: none;
+}
+
+.mobile-menu-btn {
+    display: none;
+}
+
+.header-main {
+    width: 100%;
+    padding: 0 , 60px;
+    background-color: #6b8d8f;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    
+}
+
+.header-main nav {
+    display: flex;
+}
+
+.handy-screen-more {
+    display: none;
+}
+.handy-screen {
+    display: flex;
+}
+
+.header-main .logo {
+    height: 60px;
+    width: fit-content;
+    align-self: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.logo h3{ /*Unterm logo Den narmen setzen*/
+    color: white;
+    padding: 0;
+    margin: 0;
+    top: -10%;
+    position: relative;
+    display: none;
+}
+
+.header-main .logo img {
+    height: 100%;
+}
+
+.header-main ul {
+    height: 100%;
+    padding-left: 40px;
+    list-style: none;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    margin: 0px;
+}
+
+
+.header-main ul li {
+    position: relative;
+}
+
+.header-main ul li a {
+    display: block;
+    padding: 0 10px;
+    height: 100%;
+    line-height: 60px;
+    font-size: 1rem;
+    color: white;
+    text-transform: uppercase;
+    transition: all ease-in-out 100ms;
+    text-decoration: none;
+}
+.header-main ul li a:hover {
+    background-color: #f1850c;
+    color: white;
+}
+
+
+
+
+/* Dropdown styling */
+
+.header-main ul li ul {
+    visibility: hidden;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    left: -40px;
+    transition: all ease-in-out 100ms;
+}
+
+.header-main ul li ul li {
+    white-space: nowrap;
+}
+
+ul li:hover>ul {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    
+
+}
+ul li:hover>ul a {
+    background-color: #5c8c9a;
+}
+
+/*Dropdown styling from the dropdown*/
+
+#dropdown-2 {
+    left: 157px;
+    top: 0px;
+    z-index: 300;
+}
+
+/*Dropdown styling from the dropdown stop*/
+
+
+/* Dropdown styling END! */
+
+
+
+
+
+/* Handy styling width 600px*/
+
+@media screen and (max-width: 675px) {
+    .header-main {
+        display: none;
+    }
+
+    #logo-mobile { /*Logo neben dem menu button*/
+        display: flex;
+        margin-left: 50vh;
+        flex-direction: column;
+        text-decoration: none;
+        top: -70px;
+        position: relative;
+        float: right;
+        width: 20vh;
+        height: 20vh;
+        z-index: 2;
+        align-items: center;     
+        border-radius: 1%;
+        margin-bottom: 80px;
+        
+    }
+    #logo-mobile h3 {
+        top: -20%;
+        display: flex;
+    }
+    
+
+    #logo-mobile img {
+        height: 100%;
+        align-self: center;
+        z-index: 2;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+        position: fixed;
+        top: 5px;
+        left: 5px;
+        z-index: 2000;
+        background-color: #6b8d8f;
+        border-radius: 35px;
+        padding: 5px;
+    }
+    
+    .mobile-menu-btn img {
+        height: 80%;
+        align-self: center;
+        z-index: 200;
+        
+    }
+    
+
+    .header-main {
+        height: 100vh;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 0;
+        justify-content: flex-start;
+    }
+
+    .header-main nav {
+        width: 100%;
+        height: 80vh;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        overflow-x: hidden;
+    }
+
+    .header-main .logo {
+        height: 30%;
+        padding: 0;
+        margin: 0;
+        margin-bottom: -5%;
+        display: flex;
+        align-items: center;
+    }
+    .header-main .logo img {
+        height: 60%;
+        align-self: center;
+    }
+
+    .header-main ul {
+        height: 70%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: space-between;
+    }
+
+    .header-main ul li {
+        width: 100%;
+        height: calc(100% / var(--menu-count));
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        transition: all ease-in-out 100ms;
+        
+    }
+
+    .header-main ul li a {
+        width: 100%;
+        height: fit-content;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        font-size: 1.5rem;
+
+    }
+
+    .header-main ul li ul {
+        display: none;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        left: 0;
+        margin-top: 60px;
+    }
+    .header-main ul li ul li {
+        height: fit-content;
+        display: block;
+        background-color: #6b8d8f;
+        
+    }
+    .header-main ul li ul li a {
+        background-color: #5c8c9a;
+    }
+
+    .header-main ul li:focus,
+    .header-main ul li:hover>ul{
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+    
+
+
+    #dropdown-2 { /*Das zweite dropdown in die mitte setzen*/
+        left: 0;
+    }
+
+    #droppdown-kontakt-display{
+        display:none;
+    }
+}
+/*Handy styling width 601*/
+
+@media screen and (min-width: 601px) {
+    
+    .handy-screen {
+        display:none;
+    }
+
+    .handy-screen-more {
+        display:flex;
+        position: relative;
+    }
+    
+    .handy-screen-more #droppdown-kontakt {
+        margin-top: 120px;
+    }
+
+
+}    

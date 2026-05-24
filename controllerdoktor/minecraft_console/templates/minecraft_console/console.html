@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Minecraft Server Console</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Minecraft Server Console</h1>
+    <textarea id="consoleOutput" rows="20" cols="80" readonly></textarea><br>
+    <input type="text" id="consoleInput" placeholder="Enter command...">
+    <button onclick="sendCommand()">Send</button>
+
+    <script>
+        function sendCommand() {
+            const command = document.getElementById("consoleInput").value;
+
+            $.ajax({
+                url: "/minecraft/send_command/", // Endpoint der Django-View
+                type: "POST",
+                data: {
+                    command: command,
+                    csrfmiddlewaretoken: '{{ csrf_token }}'
+                },
+                success: function(response) {
+                    if (response.status === "success") {
+                        const output = document.getElementById("consoleOutput");
+                        output.value += "> " + command + "\n" + response.output + "\n";
+                    } else {
+                        alert("Error: " + response.error);
+                    }
+                },
+                error: function(xhr) {
+                    alert("An error occurred: " + xhr.status + " " + xhr.statusText);
+                }
+            });
+            document.getElementById("consoleInput").value = "";
+        }
+    </script>
+</body>
+</html>

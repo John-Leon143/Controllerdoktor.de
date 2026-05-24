@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+
+
+    
+    <link rel="stylesheet" href="{% static 'homepage/style/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/style/main.css'%}">
+    
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <title>Controller Doktor</title>
+    
+
+</head>
+
+<body>
+    <div class="mobile-menu-btn" onclick="navbar()">
+        <img src="{% static 'homepage/img/burger-menu.png'%}" alt="mobile-menu-btn">
+    </div>
+    
+    <a class="logo" id="logo-mobile" href="{% url 'home' %}">
+        <img src="{% static 'homepage/img/logo.png' %}" alt="Logo">
+        <h3>ControllerDoktor.de</h3>
+    </a>
+
+
+    <header class="header-main">
+        <nav>
+            <a class="logo" href="">
+                <img src="{% static 'homepage/img/logo.png'%}" alt="Logo">
+                <h3>ControllerDoktor.de</h3>
+            </a>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="#ueber-uns" onclick="navbar()">Über uns</a></li>
+                <li><a href="{% url 'home' %}#dienstleistungen" onclick="navbar()">Dienstleistungen</a></li>
+                
+                <li><a href="{% url 'blog_list' %}">Blog</a></li>
+                <li class="handy-screen-more" id="droppdown-kontakt-display"><a href="{% url 'kontakt' %}">Kontakt</a></li>
+                <li class="handy-screen"><a href="{% url 'blog_list' %}">Blog</a></li>
+                <li class="handy-screen"><a href="{% url 'kontakt' %}"></a>">Kontakt</a></li>
+            </ul>     
+        </nav>
+
+
+
+    </header>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="de">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+
+
+    
+    <link rel="stylesheet" href="{% static 'homepage/style/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/style/main.css'%}">
+    <link rel="stylesheet" href="{% static 'homepage/style/Home.css'%}">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <title>Controller Doktor</title>
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'homepage/icons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'homepage/icons/favicon-16x16.png' %}">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'homepage/icons/apple-touch-icon.png' %}">
+
+
+    <link rel="icon" type="image/png" sizes="192x192" href="{% static 'homepage/icons/android-chrome-192x192.png' %}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{% static 'homepage/icons/android-chrome-512x512.png' %}">
+
+</head>
+
+<body>
+    <div class="mobile-menu-btn" onclick="navbar()">
+        <img src="{% static 'homepage/img/burger-menu.png'%}" alt="mobile-menu-btn">
+    </div>
+    
+    <a class="logo" id="logo-mobile" href="{% url 'home' %}">
+        <img src="{% static 'homepage/img/logo.png' %}" alt="Logo">
+        <h3>ControllerDoktor.de</h3>
+    </a>
+
+
+<header class="header-main">
+        <nav>
+            <a class="logo" href="">
+                <img src="{% static 'homepage/img/logo.png'%}" alt="Logo">
+                <h3>ControllerDoktor.de</h3>
+            </a>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'home' %}#ueber-uns" onclick="navbar()">Über uns</a></li>
+                <li><a href="{% url 'home' %}#dienstleistungen" onclick="navbar()">Dienstleistungen</a></li>
+                
+                <li><a href="{% url 'blog_list' %}">Blog</a></li>
+                <li class="handy-screen-more" id="droppdown-kontakt-display"><a href="{% url 'kontakt' %}">Kontakt</a></li>
+                
+                <li class="handy-screen"><a href="{% url 'kontakt' %}">Kontakt</a></li>
+            </ul>     
+        </nav>
+
+</header>
+    
+
+    <main>
+        <div class="hero_section" style="background-image: url({% static 'homepage/img/hero_section.png'%});"></div>
+        <div class="hero_content">
+            <h1>Wir reparieren Ihre Controller im Handumdrehen!</h1>
+            <h2>schnell, zuverlässig und günstig <br> Ihre Experten für Controller-Reparaturen.</h2>
+            <a ><button id="mehr_efahren" class="mehr_efahren">Mehr erfahren</button></a>
+        </div>
+    </main>
+    
+
+    <section class="ueber-uns" id="ueber-uns">
+        <div class="Unsere-mission">
+            <h1>Über Uns</h1>
+            <h2>Unser Bestreben</h2>
+            <p>Bei Controller Doktor habe ich mich darauf spezialisiert,
+            defekte Controller schnell und kostengünstig zu reparieren. <br>
+            Ich sorge dafür, dass Ihr Controller wieder wie neu funktioniert.
+             Qualität, Zuverlässigkeit und Kundenzufriedenheit stehen bei mir an erster Stelle.</p>
+        </div>
+       
+        <div class="why-us">
+            <h2>Warum Controller Doktor?</h2>
+            <ul class="werte">
+                <li id="erfahrung">
+                    <h3>Erfahrung</h3>
+                    <p>Mit über 20 Jahren Erfahrung in der Elektronik und stets neugierig auf Neues biete ich 
+                        Fachwissen und Präzision bei jeder Reparatur. </p>
+                </li>
+                <li id="verlässlichkeit">
+                    <h3>Verlässlichkeit</h3>
+                    <p>Ich verstehe, wie wichtig Ihre Geräte sind. Daher garantiere ich eine schnelle und 
+                        zuverlässige Reparatur, damit Sie so schnell wie möglich wieder spielen können.</p>
+                </li>
+                <li id="transparenz">
+                    <h3>Transparenz</h3>
+                    <p>Bei Controller Doktor gibt es keine versteckten Kosten. Ich biete transparente 
+                        Preise und informiere Sie im Voraus über alle anfallenden Kosten</p>
+                </li>
+                <li id="Kundenzufriedenheit">
+                    <h3>Kundenzufriedenheit</h3>
+                    <p>Ihre Zufriedenheit ist mein oberstes Ziel. Ich bin erst zufrieden, 
+                        wenn Sie es sind und Ihr Controller wieder einwandfrei funktioniert.</p>
+                </li>
+                
+
+            </ul>
+
+            
+        </div>
+        
+        <div class="CTA">
+            <h3>Jetzt Reparatur anfragen</h3>
+                <p>Brauchen Sie eine schnelle und zuverlässige Controller-Reparatur?<br> Kontaktieren Sie 
+                    mich jetzt und bringen Sie Ihren Controller wieder in Top-Zustand.</p>
+                <a href="/reperatur-anfragen"><button class="mehr_efahren">Reparatur anfragen</button></a>  
+        </div>        
+    
+    </section>
+
+    <section class="dienstleistungen" id="dienstleistungen">
+        <div class="leistung">
+            <h2>Unsere Dienstleistungen</h2>
+            <p>
+                Ob du einen <strong>hochwertigen Elite-Controller</strong> besitzt oder einen klassischen Standard-Controller:  
+                Wir reparieren, modifizieren und verbessern deinen Controller mit höchster Sorgfalt <br>auf Wunsch auch individuell nach deinen Vorstellungen.
+            </p>
+        </div>
+
+        <div class="leistung">
+            <h3>Elite-Controller Reparatur</h3>
+            <p>
+                Wir sind spezialisiert auf Premium-Controller wie Xbox Elite, SCUF oder Razer.
+                Mit hochwertigen Ersatzteilen und präziser Handarbeit bringen wir dein High-End-Gerät wieder in Bestform.
+            </p>
+        </div>
+
+        <div class="leistung">
+            <h3>Standard-Controller Service</h3>
+            <p>
+                Ob PlayStation, Xbox oder Nintendo Switch auch normale Controller sind bei uns in besten Händen.
+                Wir reparieren zuverlässig typische Probleme wie Stick Drift, defekte Trigger oder kaputte Anschlüsse.
+            </p>
+        </div>
+    
+        <div class="leistung">
+            <h3>Custom Modifikationen</h3>
+            <p>
+                Du willst etwas Besonderes? Kein Problem.
+                Wir bieten individuelle Anpassungen wie Trigger-Stops, LED-Beleuchtung, Soft-Touch-Oberflächen,
+                besondere Farbdesigns und mehr ganz nach deinen Vorstellungen.
+            </p>
+        </div>
+
+        <div class="leistung">
+            <h3>Tiefenreinigung & Wartung</h3>
+            <p>
+                Regelmäßige Pflege verlängert die Lebensdauer deines Controllers.
+                Wir übernehmen professionelle Innenreinigung, Kontaktschutz und technische Wartung für optimale Performance.
+            </p>
+        </div>
+
+        <div class="CTA">
+            <h3>Jetzt Reparatur oder Preis anfragen</h3>
+                <p> Du hast Probleme mit deinem Controller oder willst wissen, was deine Wunsch Modifikation kostet?
+                    Kein Problem sende uns einfach eine kurze Anfrage. Wir melden uns schnell mit einem individuellen Angebot!.</p>
+                <a href="/reperatur-anfragen"><button class="mehr_efahren">Reparatur anfragen</button></a>  
+        </div> 
+            
+    </section>
+
+
+    <script src="{% static 'homepage/js/mobile-nav.js'%}"></script>
+    <script>
+        document.getElementById('mehr_efahren').addEventListener('click', function () {
+            document.getElementById('ueber-uns').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+
+
+

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="blog-detail">
+    <div class="container">
+        <h1 class="blog-title">{{ post.title }}</h1>
+        <p class="blog-meta"><strong>{{ post.author }}</strong><br> {{ post.created_at|date:"d.m.Y" }}</p>
+
+        <div class="blog-content">
+            {{ content_html|safe }}
+        </div>
+
+        <a href="{% url 'blog_list' %}" class="back-link">← Zurück zur Übersicht</a>
+    </div>
+</section>
+{% endblock %}

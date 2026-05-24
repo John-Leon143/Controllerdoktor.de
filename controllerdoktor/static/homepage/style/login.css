@@ -1,0 +1,24 @@
+.log-in-form {
+    position: relative;
+    top: 60px;
+    align-content: center;
+    height: 100vh;
+}
+
+.log-in-form .container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 10%;
+    background-color: rgba(107,141,143, 0.8);
+    border-radius: 50px;
+    text-align: center;
+}
+
+.log-in-form .container input {
+    margin: 1%;
+    align-items: center;
+    
+}

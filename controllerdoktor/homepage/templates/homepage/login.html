@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+
+
+    
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/login.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <title>Controller Doktor</title>
+    
+
+</head>
+
+<body>
+    <div class="mobile-menu-btn" onclick="navbar()">
+        <img src="img/burger-menu.png" alt="mobile-menu-btn">
+    </div>
+    
+    <a class="logo" id="logo-mobile" href="index.html">
+        <img src="img/logo.png" alt="Logo">
+        <h3>ControllerDoktor.de</h3>
+    </a>
+
+
+    <header class="header-main">
+        <nav>
+            <a class="logo" href="index.html">
+                <img src="img/logo.png" alt="Logo">
+                <h3>ControllerDoktor.de</h3>
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#ueber-uns" onclick="navbar()">Über uns</a></li>
+                <li><a href="#">Dienstleistungen</a>
+                <ul class="droppdown">
+                        <li><a href="#">joystick-Reparatur</a>
+                            <ul class="droppdown" id="dropdown-2">
+                                <li><a href="#">Analogsticks</a></li>
+                                <li><a href="#">Tastenreperatur</a></li>
+                                <li><a href="#">Akkuwechsel</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Custom-Modifikation</a></li>
+                    </ul>
+                </li>
+                <li class="handy-screen-more" id="droppdown-kontakt-display"><a href="#">Kontakt</a>
+                    <ul class="droppdown" id="droppdown-kontakt">
+                        <li><a href="#">Kundenbewertunngen</a></li>
+                    </ul>
+                </li>
+                <li class="handy-screen"><a href="#">Kundenbewertunngen</a></li>
+                <li class="handy-screen"><a href="#">Kontakt</a></li>
+            </ul>     
+        </nav>
+
+
+
+    </header>
+    
+    <main class="log-in-form">
+        
+        <div>
+            <form action="login.php" method="post">
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Username" name="uname" required>
+                  
+                    <label for="psw"><b>Passwort</b></label>
+                    <input type="password" placeholder="Passwort" name="psw" required>
+                  
+                    <button type="submit">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Log-in Merken
+                    </label>
+                </div>
+                  
+                <div class="container" style="background-color:#f1f1f1">
+                    <span class="psw"><a href="#">Passwort Vergessen?</a></span>
+                </div>
+            </form>
+        </div>
+
+    </main>
+   
+
+
+
+
+
+
+</body>

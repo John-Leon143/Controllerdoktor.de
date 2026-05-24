@@ -1,0 +1,325 @@
+/* Hero section */
+
+.hero_section {
+    background-size: cover; 
+    background-position: center; 
+    position: relative;
+    height: 100vh;
+    margin-top: 50px;
+    
+}
+
+.hero_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(107,141,143, 0.8);
+    border-radius: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 1%;
+    top: -65vh;
+    position: relative;
+
+}
+
+.hero_content h1 {
+    text-align: center;
+    color: white;
+    padding: 1%;
+}
+
+.hero_content h2 {
+    text-align: center;
+    font-size: 18px;
+    line-height: 23px;
+    font-family: 'Roboto';
+    color: white;
+    padding: 1%;
+}
+
+.hero_content a {
+    align-self: center;
+    
+}
+
+
+
+.hero_content a button {
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #6b8d8f;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.hero_content a button:hover {
+    background-color: #5c8c9a;
+    text-decoration: underline;
+}
+
+/* Hero section end*/
+
+/* über uns section */
+
+.ueber-uns {
+    display: flex;
+    flex-direction: column;
+    height: 120vh;
+}
+
+
+
+.ueber-uns h1 {
+    text-align: center;
+    color: white;
+    font-size: 45px;
+    text-transform: none;
+    font-weight: bold;
+}
+
+.ueber-uns h2 {
+    color: white;
+    font-size: 30px;
+}
+
+.ueber-uns h3 {
+    color: white;
+    font-size: 25px;
+}
+
+.ueber-uns p {
+    color: white;
+    font-size: 20px;
+}
+
+    /* Desing unsere mission */
+
+.ueber-uns .Unsere-mission {
+    background-color: rgba(107,141,143, 0.8);
+    border-radius: 20px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    text-align: center;
+}
+
+.ueber-uns .Unsere-mission h1 { 
+    text-align: center;
+    color: white;
+    top: 0;
+    margin-bottom: 2%;
+    font-size: 30px;
+    text-transform: none;
+    font-weight: bold;
+}
+
+.ueber-uns .Unsere-mission h2 {
+    padding-bottom: 0.5%;
+}
+
+.ueber-uns .Unsere-mission p {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+    /* Desing unsere mission end */
+
+    /* Desing Warum wir */
+.ueber-uns .why-us {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
+    background-color: rgba(107,141,143, 0.8);
+    border-radius: 20px;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.ueber-uns .why-us h2 {
+    text-align: center;
+}
+
+.ueber-uns .why-us h3 {
+    color: white;
+}
+
+.ueber-uns .why-us p { /*text im li weiter in die mitte bringen*/
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    margin-top: 0.5%;
+}
+
+.ueber-uns .why-us  ul li {
+    list-style: disc;
+    margin-top: 1%;
+} 
+.ueber-uns .why-us  ul li::marker { /*punkt weiß machen*/
+    color: white;
+}
+
+    /* Desing Warum wir end */
+    /*CTA*/
+.ueber-uns .CTA {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-top: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    background-color: rgba(107,141,143, 0.8);
+    border-radius: 20px;
+}
+
+.ueber-uns .CTA h3 {
+    padding: 0.5%;
+    text-decoration: underline;
+    color: #FFA500;
+    margin-bottom: 2%;
+
+}
+
+.ueber-uns .CTA p {
+    text-decoration: none;
+    color: #FFFFFF;
+    margin-bottom: 1%;
+    font-size: 20px;
+}
+
+
+.CTA a button {
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #f1850c;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.CTA a button:hover {
+    background-color: #FFA500; 
+    text-decoration: underline;
+}
+
+    /*CTA End*/
+
+/* über uns section end*/
+
+/*Dienstleistungen*/
+
+.dienstleistungen {
+    text-align: center;
+}
+
+
+.dienstleistungen div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
+    background-color: rgba(107,141,143, 0.8);
+    border-radius: 20px;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.dienstleistungen h2 {
+    text-align: center;
+    color: white;
+    top: 0;
+    margin-bottom: 2%;
+    font-size: 30px;
+    text-transform: none;
+    font-weight: bold;
+}
+.dienstleistungen h3 {
+    padding: 0.5%;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 2%;
+    font-size: 25px;
+}
+.dienstleistungen .CTA h3 {
+    padding: 0.5%;
+    text-decoration: underline;
+    color: #FFA500;
+    margin-bottom: 2%;
+    font-size: 25px;
+}
+
+.dienstleistungen .CTA p {
+    text-decoration: none;
+    color: #FFFFFF;
+    margin-bottom: 1%;
+    font-size: 20px;
+}
+
+.dienstleistungen .CTA {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-top: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    background-color: rgba(107,141,143, 0.8);
+    border-radius: 20px;
+}
+/*Dienstleistungen emd*/
+
+
+@media screen and (max-width: 970px) {
+    
+    .hero_content h1 {
+        padding: 1%;
+    }
+    
+    .ueber-uns {
+        height: 200vh;
+    }
+
+    .contact {
+        margin-top: 1%;
+        margin-bottom: 1%;
+        
+    }
+
+} 
+
+@media screen and (max-width: 675px) {
+    
+    .hero_content {
+        margin-left: 2%;
+        margin-right: 2%;
+        top: -70vh;
+    }
+
+
+    .hero_content h1 {
+        padding: 1%;
+    }
+    
+
+}
+
